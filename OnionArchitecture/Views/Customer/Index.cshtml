@@ -1,0 +1,80 @@
+﻿@model CustomerPaginationPageModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "_Layout";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary"> Customer List</h2>
+        </div>
+        <div class="col-6">
+            <a asp-controller="Customer" asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-circle"> Create New Customer</i></a>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="searchValue" type="search" placeholder="Search" aria-label="Search" value="@Model.searchValue">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Tên khách hàng
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th>
+                Ngày Sinh
+            </th>
+            <th>
+                Số điện thoại
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model.Data)
+        {
+            <tr>
+                <td width="20%">
+                    @obj.CustomerName
+                </td>
+                <td width="20%">
+                    @obj.Address
+                </td>
+                <td width="20%">
+                    @obj.Birthday.ToString("dd-MM-yyyy")
+                </td>
+                <td width="20%">
+                    @obj.Phone
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="Customer" asp-action="Update"   asp-route-id="@obj.CustomerID"><i class="bi bi-pencil-square" style="margin-right:5px"> Edit </i></a>
+                    <a class="btn btn-primary" onclick="return confirm('Are you sure you wish to delete this customer?');" asp-controller="Customer" asp-action="Delete" asp-route-id="@obj.CustomerID"><i class="bi bi-trash-fill">Delete</i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@{
+    PaginationPageModel data = new PaginationPageModel()
+    {
+        PageSize = Model.PageSize,
+        Page = Model.Page,
+        rowCount = Model.rowCount,
+        searchValue = Model.searchValue
+    };
+}
+
+@(await Html.PartialAsync("_Pagination", data))
+
+
+
+

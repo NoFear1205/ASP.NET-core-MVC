@@ -1,0 +1,49 @@
+﻿@using DomainLayer.Model
+@using OnionArchitecture.Helper
+@model Product
+@inject SelectListHelper list
+@{
+    ViewData["Title"] = "Create";
+}
+<form asp-controller="Product" asp-action="Save" method="post" enctype="multipart/form-data">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Product</h2>
+
+        </div>
+        @*<div asp-validation-summary="All" class="text-danger"></div>*@
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Provider"></label>
+            <input asp-for="Provider" class="form-control" />
+            <span asp-validation-for="Provider" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Category"></label>
+            @Html.DropDownListFor(p=>p.CategoryID,list.ListCategoriesItem(), new { @class = "form-control" })
+            <span asp-validation-for="Category" class="text-danger"></span>
+           @* @Html.ValidationMessage("Image","",new {@class = "text-danger"})*@
+        </div>
+        <div class="mb-3">
+            <label asp-for="Image"></label>
+            <input class="form-control" 
+            name="ImageString"  type="file" accept="image/*"/>
+            @Html.ValidationMessage("Image","",new {@class = "text-danger"})
+        </div>
+        @*<input type="hidden" name="image" value="null" />*@
+        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+        <a asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Back to list
+        </a>
+    </div>
+</form>
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+}
+
