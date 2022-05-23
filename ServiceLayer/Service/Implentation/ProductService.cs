@@ -24,37 +24,14 @@ namespace ServiceLayer.Service.Implentation
         /// <exception cref="NotImplementedException"></exception>
         public string AddProductRepo(Product product)
         {
-            try
-            {
-                _db.AddProduct(product);
-                return "Successfully add";
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+                return _db.AddProduct(product);
         }
 
         public string DeleteProductRepo(int id)
         {
-            try
-            {
-                var data = _db.FindById(id);
-                if (data == null)
-                {
-                    return "Not found record";
-                }
-                else
-                {
-                    _db.DeleteProduct(data);
-                    return "Successfully remove";
-                }
 
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+                var data = _db.FindById(id);
+                return _db.DeleteProduct(data);
 
         }
         /// <summary>
@@ -97,16 +74,7 @@ namespace ServiceLayer.Service.Implentation
 
         public string UpdateProductRepo(Product product)
         {
-            var ProductValue = _db.FindById(product.Id);
-            if (ProductValue == null)
-            {
-                return "No record Found";
-            }
-            else
-            {              
-                _db.UpdateProduct(ProductValue);
-                return "Successfully Update";
-            }
+                return _db.UpdateProduct(product);
         }
     }
 }

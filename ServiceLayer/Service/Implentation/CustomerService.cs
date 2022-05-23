@@ -25,38 +25,14 @@ namespace ServiceLayer.Service.Implentation
         /// <exception cref="NotImplementedException"></exception>
         public string AddCustomerRepo(Customer customer)
         {
-            try
-            {
-                _db.AddCustomer(customer);
-                return "Successfully add";
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
+                return _db.AddCustomer(customer);
         }
 
         public string DeleteCustomerRepo(int id)
         {
-            try
-            {
-                var data = _db.FindById(id);
-                if (data == null)
-                {
-                    return "Not found record";
-                }
-                else
-                {
-                    _db.DeleteCustomer(data);
-                    return "Successfully remove";
-                }
 
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-
+            var data = _db.FindById(id);
+            return _db.DeleteCustomer(data);
         }
         /// <summary>
         /// Get All Customer record
@@ -98,22 +74,7 @@ namespace ServiceLayer.Service.Implentation
 
         public string UpdateCustomerRepo(Customer customer)
         {
-            var CustomerValue = _db.FindById(customer.CustomerID);
-            if (CustomerValue == null)
-            {
-                return "No record Found";
-            }
-            else
-            {
-                if (customer.CustomerName != null)
-                    CustomerValue.CustomerName = customer.CustomerName;
-                if (customer.Address != null)
-                    CustomerValue.Address = customer.Address;
-                if (CustomerValue.Phone != null)
-                    CustomerValue.Phone = customer.Phone;
-                _db.UpdateCustomer(CustomerValue);
-                return "Successfully Update";
-            }
+            return _db.UpdateCustomer(customer);
         }
     }
 }
