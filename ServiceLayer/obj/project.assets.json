@@ -1811,11 +1811,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\ServiceLayer\\ServiceLayer.csproj",
+      "projectUniqueName": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\ServiceLayer\\ServiceLayer.csproj",
       "projectName": "ServiceLayer",
-      "projectPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\ServiceLayer\\ServiceLayer.csproj",
+      "projectPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\ServiceLayer\\ServiceLayer.csproj",
       "packagesPath": "C:\\Users\\haqua\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\ServiceLayer\\obj\\",
+      "outputPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\ServiceLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\haqua\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1832,11 +1832,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\DomainLayer\\DomainLayer.csproj": {
-              "projectPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\DomainLayer\\DomainLayer.csproj"
+            "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\DomainLayer.csproj": {
+              "projectPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\DomainLayer.csproj"
             },
-            "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\RepositoryLayer\\RepositoryLayer.csproj": {
-              "projectPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\RepositoryLayer\\RepositoryLayer.csproj"
+            "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\RepositoryLayer\\RepositoryLayer.csproj": {
+              "projectPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\RepositoryLayer\\RepositoryLayer.csproj"
             }
           }
         }

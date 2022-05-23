@@ -14,11 +14,11 @@ namespace ServiceLayer.Service.Contact
         //Get Single record
         Product GetSingleRepo(int id);
         //Add record
-        string AddCustomerRepo(Product product);
+        string AddProductRepo(Product product);
         //Update or edit record
-        string UpdateCustomerRepo(Product product);
+        string UpdateProductRepo(Product product);
         //Delete or remove
-        string DeleteCustomerRepo(int id);
+        string DeleteProductRepo(int id);
         int Count(string searchValue);
     }
 }

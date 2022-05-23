@@ -63,7 +63,7 @@ namespace OnionArchitecture.Controllers
             }
             if (ModelState.IsValid)
             {
-                _product.AddCustomerRepo(model);
+                _product.AddProductRepo(model);
                 return RedirectToAction("Index");
             }
             return View("Create", model);
@@ -94,7 +94,7 @@ namespace OnionArchitecture.Controllers
 
             if (ModelState.IsValid)
             {
-                _product.UpdateCustomerRepo(model);
+                _product.UpdateProductRepo(model);
                 return RedirectToAction("Index");
             }
             return View("Update",model);
@@ -102,7 +102,7 @@ namespace OnionArchitecture.Controllers
         /*[Route("delete")]*/
         public IActionResult Delete(int id)
         {
-            _product.DeleteCustomerRepo(id);
+            _product.DeleteProductRepo(id);
             return RedirectToAction("Index");
         }
 

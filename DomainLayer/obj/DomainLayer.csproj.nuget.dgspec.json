@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\DomainLayer\\DomainLayer.csproj": {}
+    "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\DomainLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\DomainLayer\\DomainLayer.csproj": {
+    "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\DomainLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\DomainLayer\\DomainLayer.csproj",
+        "projectUniqueName": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\DomainLayer.csproj",
         "projectName": "DomainLayer",
-        "projectPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\DomainLayer\\DomainLayer.csproj",
+        "projectPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\DomainLayer.csproj",
         "packagesPath": "C:\\Users\\haqua\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\DomainLayer\\obj\\",
+        "outputPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\haqua\\AppData\\Roaming\\NuGet\\NuGet.Config",

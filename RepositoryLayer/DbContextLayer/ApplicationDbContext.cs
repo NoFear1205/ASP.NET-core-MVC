@@ -1,5 +1,6 @@
 ﻿using DomainLayer.Model;
 using Microsoft.EntityFrameworkCore;
+using RepositoryLayer.DbContextLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +17,13 @@ namespace RepositoryLayer
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>()
+            /*modelBuilder.Entity<Product>()
                         .HasOne<Category>(c => c.Category)
                         .WithMany(p => p.Products)
                         .OnDelete(DeleteBehavior.Restrict)
-                        .HasForeignKey(c => c.CategoryID);
+                        .HasForeignKey(c => c.CategoryID);*/
+            new ProductEntityTypeConfiguration().Configure(modelBuilder.Entity<Product>());
+
         }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }

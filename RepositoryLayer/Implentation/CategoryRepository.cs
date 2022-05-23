@@ -36,8 +36,14 @@ namespace RepositoryLayer.Implentation
         }
 
         public Category FindById(int id)
-        {
-            return _context.Categories.Find(id);
+        {   
+            var query = from st in _context.Categories
+                        where st.CategoryID == id
+                        select st;
+            var cate = query.FirstOrDefault<Category>();
+           
+            return cate;
+            //return _context.Categories.Find(id);
         }
 
         public IList<Category> GetAll()
@@ -47,8 +53,12 @@ namespace RepositoryLayer.Implentation
 
         public IList<Category> ListOfCategories(int page, int pageSize, string searchValue)
         {
-            var data = _context.Categories.Where(c => c.CategoryName.Contains(searchValue)).ToList();
-            return data.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var result = from category in _context.Categories
+                         where category.CategoryName.Contains(searchValue)
+                         select category;
+            return result.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            /*var data = _context.Categories.Where(c => c.CategoryName.Contains(searchValue)).ToList();
+            return data.Skip((page - 1) * pageSize).Take(pageSize).ToList();*/
         }
 
         public bool Update(Category category)

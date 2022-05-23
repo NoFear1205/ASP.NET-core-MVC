@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YwbmXp0gwuqC2svyT4q8GzLOs3jgE2ZdOUmlQ4eb1zCbB24g6BuT4DF7Slnt0covIaK4YPeyhGxyLPXvff3P/w==",
+  "dgSpecHash": "T9N3bdHFf6WBBue+G9INXvcC1Ct6URaX9IDKR8weqQ6Vl29RkBkgB0YJ2chlFRTJjQuY+BENXGqqV+G7PA8CYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\DomainLayer\\DomainLayer.csproj",
+  "projectFilePath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\DomainLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.4\\microsoft.entityframeworkcore.abstractions.6.0.4.nupkg.sha512",

@@ -22,7 +22,7 @@ namespace ServiceLayer.Service.Implentation
         /// <param name="customer"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public string AddCustomerRepo(Product product)
+        public string AddProductRepo(Product product)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace ServiceLayer.Service.Implentation
             }
         }
 
-        public string DeleteCustomerRepo(int id)
+        public string DeleteProductRepo(int id)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace ServiceLayer.Service.Implentation
             return _db.FindById(id);
         }
 
-        public string UpdateCustomerRepo(Product product)
+        public string UpdateProductRepo(Product product)
         {
             var ProductValue = _db.FindById(product.Id);
             if (ProductValue == null)

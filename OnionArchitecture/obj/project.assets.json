@@ -1924,11 +1924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\OnionArchitecture\\OnionArchitecture.csproj",
+      "projectUniqueName": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\OnionArchitecture\\OnionArchitecture.csproj",
       "projectName": "OnionArchitecture",
-      "projectPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\OnionArchitecture\\OnionArchitecture.csproj",
+      "projectPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\OnionArchitecture\\OnionArchitecture.csproj",
       "packagesPath": "C:\\Users\\haqua\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\OnionArchitecture\\obj\\",
+      "outputPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\OnionArchitecture\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\haqua\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1945,11 +1945,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\RepositoryLayer\\RepositoryLayer.csproj": {
-              "projectPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\RepositoryLayer\\RepositoryLayer.csproj"
+            "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\RepositoryLayer\\RepositoryLayer.csproj": {
+              "projectPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\RepositoryLayer\\RepositoryLayer.csproj"
             },
-            "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\ServiceLayer\\ServiceLayer.csproj": {
-              "projectPath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\ServiceLayer\\ServiceLayer.csproj"
+            "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\ServiceLayer\\ServiceLayer.csproj": {
+              "projectPath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\ServiceLayer\\ServiceLayer.csproj"
             }
           }
         }

@@ -36,7 +36,7 @@ namespace RepositoryLayer.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("DomainLayer.Model.Customer", b =>
@@ -66,7 +66,7 @@ namespace RepositoryLayer.Migrations
 
                     b.HasKey("CustomerID");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("DomainLayer.Model.Product", b =>
@@ -95,7 +95,7 @@ namespace RepositoryLayer.Migrations
 
                     b.HasIndex("CategoryID");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("DomainLayer.Model.Product", b =>

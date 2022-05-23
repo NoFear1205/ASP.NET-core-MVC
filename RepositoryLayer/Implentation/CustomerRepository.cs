@@ -9,17 +9,17 @@ namespace RepositoryLayer.Implentation
 {
     public class CustomerRepository : ICustomerRepository
     {
-        private readonly ApplicationDbContext applicationDbContext;
+        private readonly ApplicationDbContext _context;
         public CustomerRepository(ApplicationDbContext dbContext)
         {
-            applicationDbContext = dbContext;
+            _context = dbContext;
         }
         public string AddCustomer(Customer customer)
         {
             try
             {
-                applicationDbContext.Customers.Add(customer);
-                applicationDbContext.SaveChanges();
+                _context.Customers.Add(customer);
+                _context.SaveChanges();
                 return "Successfull Add Customer";
             }catch (Exception ex)
             {
@@ -31,15 +31,15 @@ namespace RepositoryLayer.Implentation
 
         public int Count(string searchValue)
         {
-            return applicationDbContext.Customers.Where(c=>c.CustomerName.Contains(searchValue)).Count();
+            return _context.Customers.Where(c=>c.CustomerName.Contains(searchValue)).Count();
         }
 
         public string DeleteCustomer(Customer customer)
         {
             try
             {
-                applicationDbContext.Customers.Remove(customer);
-                applicationDbContext.SaveChanges(true);
+                _context.Customers.Remove(customer);
+                _context.SaveChanges(true);
                 return "Successfully delete record";
             }   
             catch (Exception ex)
@@ -50,20 +50,28 @@ namespace RepositoryLayer.Implentation
 
         public Customer FindById(int id)
         {
-            return applicationDbContext.Customers.Find(id);
+            var result = from customer in _context.Customers
+                         where customer.CustomerID == id
+                         select customer;
+            return result.FirstOrDefault();
+          /*  return applicationDbContext.Customers.Find(id);*/
         }
 
         public IList<Customer> ListOfCustomers(int page, int pageSize, string searchValue)
         {
-            var data= applicationDbContext.Customers.Where((c)=>c.CustomerName.Contains(searchValue)).ToList();
-            return data.Skip((page-1)*pageSize).Take(pageSize).ToList();
+            var result = from customer in _context.Customers
+                         where customer.CustomerName.Contains(searchValue)
+                         select customer;
+            return result.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            /* var data= _context.Customers.Where((c)=>c.CustomerName.Contains(searchValue)).ToList();
+             return data.Skip((page-1)*pageSize).Take(pageSize).ToList();*/
         }
 
         public string UpdateCustomer(Customer customer)
         {
             try
             {
-                applicationDbContext.Customers.Update(customer);
+                _context.Customers.Update(customer);
                 return "Successfully Update Customer";
             }catch(Exception ex)
             {

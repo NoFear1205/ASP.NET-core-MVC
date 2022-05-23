@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0zF2eM+wLlvezG6gRnPUWLeLgpftgVdN9u4TgUFzsh1r+rzUEEwSGqv+Vp2vIHsNd6XlBnYqXSW+PKYKlEVZQg==",
+  "dgSpecHash": "PQgwqh8F9l3dlkGG8fim+WjNuwAasBc5C8h1A2pYGmbSs9wvRcH2hQv5K5q0/5Tl9kTX4+q4zp+83CByf8D4Qw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\haqua\\source\\repos\\OnionArchitecture\\OnionArchitecture\\OnionArchitecture.csproj",
+  "projectFilePath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\OnionArchitecture\\OnionArchitecture.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haqua\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
