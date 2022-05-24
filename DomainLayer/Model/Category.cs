@@ -11,8 +11,9 @@ namespace DomainLayer.Model
     {
         [Key]
         public int CategoryID { get; set; }
-        [Required]
-        public string CategoryName { get; set; }
+        [Required(ErrorMessage = "Tên loại sản phẩm không được để trống")]
+        [Display(Name ="Tên Loại sản phẩm")]
+        public string? CategoryName { get; set; }
         public ICollection<Product>? Products { get; set; }
     }
 }

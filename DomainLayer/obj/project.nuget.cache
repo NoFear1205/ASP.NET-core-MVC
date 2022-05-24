@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "T9N3bdHFf6WBBue+G9INXvcC1Ct6URaX9IDKR8weqQ6Vl29RkBkgB0YJ2chlFRTJjQuY+BENXGqqV+G7PA8CYg==",
+  "dgSpecHash": "dMdwIxNGbEmsZCeiWPPRFyXe2IbRaE4DLsYBsF0oeDXWo7bRiOhJlcFUwiu7zvyN0W2BMYy6tX28UWmvQcEwQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\DomainLayer\\DomainLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\haqua\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\haqua\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\haqua\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.4\\microsoft.entityframeworkcore.abstractions.6.0.4.nupkg.sha512",
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.4\\microsoft.entityframeworkcore.analyzers.6.0.4.nupkg.sha512",

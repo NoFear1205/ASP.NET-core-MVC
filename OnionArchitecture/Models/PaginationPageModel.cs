@@ -26,7 +26,5 @@ namespace OnionArchitecture.Models
                 return p;
             }
         }
-       
-
     }
 }

@@ -70,7 +70,7 @@
                 }
                 else
                 {
-                    <li><a href="~/category?page=@i&searchValue=@Model.searchValue">@i</a></li>
+                    <li><a asp-controller="Category" asp-action="index" asp-route-page ="@i" asp-route-searchValue="@Model.searchValue">@i</a></li>
                 }
             }
         </ul>

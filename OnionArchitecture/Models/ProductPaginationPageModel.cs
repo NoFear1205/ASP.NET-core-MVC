@@ -1,9 +1,10 @@
 ﻿using DomainLayer.Model;
+using OnionArchitecture.Models.Mapper;
 
 namespace OnionArchitecture.Models
 {
     public class ProductPaginationPageModel : PaginationPageModel
     {
-        public IList<Product>? Data { get; set; }
+        public IList<ProductDTO>? Data { get; set; }
     }
 }

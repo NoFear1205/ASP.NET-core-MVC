@@ -16,7 +16,7 @@
                 }
                 else
                 {
-                    <li><a href="~/customer?page=@i&searchValue=@Model.searchValue">@i</a></li>
+                    <li><a asp-controller="Customer" asp-action="index" asp-route-page="@i" asp-route-searchValue="@Model.searchValue">@i</a></li>
                 }
             }
         </ul>

@@ -132,3 +132,5 @@ C:\Users\haqua\OneDrive\Máy tính\ASP.NET-core-MVC\OnionArchitecture\obj\Debug\
 C:\Users\haqua\OneDrive\Máy tính\ASP.NET-core-MVC\OnionArchitecture\obj\Debug\net6.0\OnionArchitecture.csproj.CopyComplete
 C:\Users\haqua\OneDrive\Máy tính\ASP.NET-core-MVC\OnionArchitecture\obj\Debug\net6.0\OnionArchitecture.genruntimeconfig.cache
 C:\Users\haqua\OneDrive\Máy tính\ASP.NET-core-MVC\OnionArchitecture\obj\Debug\net6.0\ref\OnionArchitecture.dll
+C:\Users\haqua\OneDrive\Máy tính\ASP.NET-core-MVC\OnionArchitecture\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\haqua\OneDrive\Máy tính\ASP.NET-core-MVC\OnionArchitecture\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

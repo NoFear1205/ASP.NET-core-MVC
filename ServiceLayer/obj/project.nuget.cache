@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1VPxvYuU9DPcRPAnZlXF7XjE0XoOzPFfEjlQVk73ZyS3FXMSeF3UWxbv8uWH40SGWBYH+P8T7aSGj+zHoQBYOg==",
+  "dgSpecHash": "B9qzNf8UtwaFpwR6Vn16ovJowysOfhhlGioWgtyDiLEW/1og1R/q+KT7pWRGDw2ZwqUSrh9oGOgxHQUT4tB25w==",
   "success": true,
   "projectFilePath": "C:\\Users\\haqua\\OneDrive\\Máy tính\\ASP.NET-core-MVC\\ServiceLayer\\ServiceLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\haqua\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\haqua\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\haqua\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\haqua\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\haqua\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",

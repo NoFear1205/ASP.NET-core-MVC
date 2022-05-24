@@ -10,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// Add auto mapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+//
 builder.Services.AddDbContext<ApplicationDbContext>(con => con.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));

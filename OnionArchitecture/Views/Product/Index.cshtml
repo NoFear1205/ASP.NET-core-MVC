@@ -51,7 +51,7 @@
                 </td>
                 <td width="20%">
                     @*@obj.Category.CategoryName*@
-                    @obj.Category.CategoryName
+                    @obj.CategoryName
                 </td>
                 <td width="20%">
                     <img src="@obj.Image" style="width:100px; height:100px;" alt="Italian Trulli">
@@ -77,7 +77,7 @@
                 }
                 else
                 {
-                    <li><a href="~/product?page=@i&searchValue=@Model.searchValue">@i</a></li>
+                    <li><a asp-controller="Product" asp-action="Index" asp-route-page="@i" asp-route-searchValue="@Model.searchValue">@i</a></li>
                 }
             }
         </ul>

@@ -1,6 +1,8 @@
-﻿using DomainLayer.Model;
+﻿using AutoMapper;
+using DomainLayer.Model;
 using Microsoft.AspNetCore.Mvc;
 using OnionArchitecture.Models;
+using OnionArchitecture.Models.Mapper;
 using ServiceLayer.Service.Contact;
 using System.Web;
 
@@ -9,9 +11,11 @@ namespace OnionArchitecture.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService _product;
-        public ProductController(IProductService product)
+        private readonly IMapper _mapper;
+        public ProductController(IProductService product, IMapper mapper)
         {
             _product = product;
+            _mapper = mapper;
         }
         public IActionResult Index(int page, string searchValue)
         {
@@ -21,13 +25,18 @@ namespace OnionArchitecture.Controllers
             if (page <= 0)
                 page = 1;
             IList<Product> list = _product.GetAll(page, pageSize, searchValue);
+            List<ProductDTO> dto = new List<ProductDTO>();
+            foreach(var item in list)
+            {
+                dto.Add(_mapper.Map<ProductDTO>(item));
+            }
             ProductPaginationPageModel model = new ProductPaginationPageModel()
             {
                 PageSize = pageSize,
                 Page = page,
                 searchValue = searchValue,
                 rowCount = _product.Count(searchValue),
-                Data = list
+                Data = dto
             };
             return View(model);
         }
@@ -39,8 +48,9 @@ namespace OnionArchitecture.Controllers
         /*[Route("save")]*/
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> SaveAsync(Product model, IFormFile ImageString)
+        public async Task<IActionResult> SaveAsync(ProductDTO result, IFormFile ImageString)
         {
+            var model = _mapper.Map<Product>(result);
             if(ImageString != null)
             {
                 var fileTime = DateTime.UtcNow.ToString("yyMMddHHmmss");
@@ -73,12 +83,15 @@ namespace OnionArchitecture.Controllers
         public IActionResult Update(int id)
         {
             var CustomerValue = _product.GetSingleRepo(id);
+            if (CustomerValue == null)
+                return RedirectToAction("Index");
             return View(CustomerValue);
         }
         /*[Route("edit")]*/
         [HttpPost]
-        public async Task<IActionResult> EditAsync(Product model,IFormFile? ImageString)
+        public async Task<IActionResult> EditAsync(ProductDTO result,IFormFile? ImageString)
         {
+            var model = _mapper.Map<Product>(result);    
             if (ImageString != null)
             {
                 var fileTime = DateTime.UtcNow.ToString("yyMMddHHmmss");
