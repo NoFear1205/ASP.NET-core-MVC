@@ -11,10 +11,10 @@ namespace ServiceLayer.Service.Implentation
 {
     public class ProductService : IProductService
     {
-        private readonly IProductRepository _db;
+        private readonly IProductRepository _product;
         public ProductService(IProductRepository productRepository)
         {
-            _db = productRepository;
+            _product = productRepository;
         }
         /// <summary>
         /// Add Customer
@@ -24,14 +24,14 @@ namespace ServiceLayer.Service.Implentation
         /// <exception cref="NotImplementedException"></exception>
         public string AddProductRepo(Product product)
         {
-                return _db.AddProduct(product);
+                return _product.AddProduct(product);
         }
 
         public string DeleteProductRepo(int id)
         {
 
-                var data = _db.FindById(id);
-                return _db.DeleteProduct(data);
+                var data = _product.FindById(id);
+                return _product.DeleteProduct(data);
 
         }
         /// <summary>
@@ -53,11 +53,11 @@ namespace ServiceLayer.Service.Implentation
             {
                 searchValue = "";
             }
-            return _db.ListOfProduct(page, pageSize, searchValue);
+            return _product.ListOfProduct(page, pageSize, searchValue);
         }
         public int Count(string searchValue)
         {
-            var data = _db.Count(searchValue);
+            var data = _product.Count(searchValue);
             return data;
         }
         /// <summary>
@@ -69,12 +69,12 @@ namespace ServiceLayer.Service.Implentation
         public Product GetSingleRepo(int id)
         {
             //return _db.Customers.Where(c=>c.CustomerID==id).FirstOrDefault();
-            return _db.FindById(id);
+            return _product.FindById(id);
         }
 
         public string UpdateProductRepo(Product product)
         {
-                return _db.UpdateProduct(product);
+                return _product.UpdateProduct(product);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿@model CategoryPaginationPageModel
+﻿@using ServiceLayer.Service.Contact
+@inject ICategoryService cate
+@model CategoryPaginationPageModel
 @{
     ViewBag.Title = "Index";
     Layout = "_Layout";
@@ -47,7 +49,10 @@
               
                 <td>
                     <a class="btn btn-primary" asp-controller="Category" asp-action="Update"   asp-route-id="@obj.CategoryID"><i class="bi bi-pencil-square" style="margin-right:5px"> Edit </i></a>
-                    <a class="btn btn-primary" onclick="return confirm('Are you sure you wish to delete this customer?');" asp-controller="Category" asp-action="Delete" asp-route-id="@obj.CategoryID"><i class="bi bi-trash-fill">Delete</i></a>
+                    @if (cate.InUsed(obj.CategoryID))
+                    {
+                       <a class="btn btn-primary" onclick="return confirm('Are you sure you wish to delete this customer?');" asp-controller="Category" asp-action="Delete" asp-route-id="@obj.CategoryID"><i class="bi bi-trash-fill">Delete</i></a>
+                    }
                 </td>
             </tr>
         }

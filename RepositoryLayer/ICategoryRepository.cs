@@ -16,5 +16,7 @@ namespace RepositoryLayer
         bool Update(Category category); 
         bool Delete(Category category);
         int Count(string searchValue);
+        bool InUsed(int categoryID);
+
     }
 }

@@ -12,10 +12,10 @@ namespace ServiceLayer.Service.Implentation
 {
     public class CustomerService : ICustomerService
     {
-        private readonly ICustomerRepository _db;
+        private readonly ICustomerRepository _customer;
         public CustomerService(ICustomerRepository customerRepository)
         {
-            _db = customerRepository;
+            _customer = customerRepository;
         }
         /// <summary>
         /// Add Customer
@@ -25,14 +25,14 @@ namespace ServiceLayer.Service.Implentation
         /// <exception cref="NotImplementedException"></exception>
         public string AddCustomerRepo(Customer customer)
         {
-                return _db.AddCustomer(customer);
+                return _customer.AddCustomer(customer);
         }
 
         public string DeleteCustomerRepo(int id)
         {
 
-            var data = _db.FindById(id);
-            return _db.DeleteCustomer(data);
+            var data = _customer.FindById(id);
+            return _customer.DeleteCustomer(data);
         }
         /// <summary>
         /// Get All Customer record
@@ -53,11 +53,11 @@ namespace ServiceLayer.Service.Implentation
             {
                 searchValue = "";
             }
-            return _db.ListOfCustomers(page, pageSize, searchValue);
+            return _customer.ListOfCustomers(page, pageSize, searchValue);
         }
         public int Count(string searchValue)
         {
-            var data = _db.Count(searchValue);
+            var data = _customer.Count(searchValue);
             return data;
         }
         /// <summary>
@@ -69,12 +69,12 @@ namespace ServiceLayer.Service.Implentation
         public Customer GetSingleRepo(int id)
         {
             //return _db.Customers.Where(c=>c.CustomerID==id).FirstOrDefault();
-            return _db.FindById(id);
+            return _customer.FindById(id);
         }
 
         public string UpdateCustomerRepo(Customer customer)
         {
-            return _db.UpdateCustomer(customer);
+            return _customer.UpdateCustomer(customer);
         }
     }
 }

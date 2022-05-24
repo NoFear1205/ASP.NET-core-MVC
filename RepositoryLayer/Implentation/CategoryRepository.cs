@@ -51,6 +51,16 @@ namespace RepositoryLayer.Implentation
             return _context.Categories.ToList();
         }
 
+        public bool InUsed(int categoryID)
+        {
+            var result = from product in _context.Products
+                         where product.CategoryID == categoryID
+                         select product;
+            if (result.FirstOrDefault() == null)
+                return true;
+            else return false;
+        }
+
         public IList<Category> ListOfCategories(int page, int pageSize, string searchValue)
         {
             var result = from category in _context.Categories

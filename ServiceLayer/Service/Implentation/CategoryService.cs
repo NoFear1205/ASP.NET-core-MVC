@@ -48,6 +48,11 @@ namespace ServiceLayer.Service.Implentation
            return _cate.FindById(id);
         }
 
+        public bool InUsed(int categoryID)
+        {
+            return _cate.InUsed(categoryID);
+        }
+
         public bool UpdateCategory(Category category)
         {
             return _cate.Update(category);

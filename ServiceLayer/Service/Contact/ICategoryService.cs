@@ -16,5 +16,6 @@ namespace ServiceLayer.Service.Contact
         bool DeleteCategory(Category category);
         bool UpdateCategory(Category category);
         int Count(string searchValue);
+        bool InUsed(int categoryID);
     }
 }
