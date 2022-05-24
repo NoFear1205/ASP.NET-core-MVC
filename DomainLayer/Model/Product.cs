@@ -12,10 +12,10 @@ namespace DomainLayer.Model
         [Key]
         public int Id { get; set; }
         public string? Image { get; set; }
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public string Provider { get; set; }
+        [Required(ErrorMessage ="Tên sản phầm không được để trống")]
+        public string? Name { get; set; }
+        [Required(ErrorMessage = "Tên nhà cung cấp không được để trống")]
+        public string? Provider { get; set; }
         public int CategoryID { get; set; }
         public Category? Category { get; set; }  
         

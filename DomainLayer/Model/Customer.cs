@@ -16,15 +16,15 @@ namespace DomainLayer.Model
         [Display(Name ="Tên khách hàng")]
         [Required(ErrorMessage ="Tên khách hàng không được để trống")]
         [StringLength(30)]
-        public string CustomerName { get; set; }
+        public string? CustomerName { get; set; }
         [Display(Name ="Địa chỉ")]
         [Required(ErrorMessage ="Địa chỉ không được để trống")]
-        public string  Address { get; set; }
+        public string?  Address { get; set; }
         [Display(Name = "Số điện thoại")]
         [Required(ErrorMessage ="Số điện thoại không được để trống")]
         [StringLength(10)]
         [Phone]
-        public string Phone { get; set; }
+        public string? Phone { get; set; }
         [Display(Name ="Ngày sinh")]
         [DataType(DataType.Date)]
         [Required(ErrorMessage ="Ngày sinh không được để trống")]

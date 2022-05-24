@@ -61,6 +61,7 @@ namespace RepositoryLayer.Implentation
         {
             var result = from customer in _context.Customers
                          where customer.CustomerName.Contains(searchValue)
+                         orderby customer.CustomerName
                          select customer;
             return result.Skip((page - 1) * pageSize).Take(pageSize).ToList();
             /* var data= _context.Customers.Where((c)=>c.CustomerName.Contains(searchValue)).ToList();

@@ -63,6 +63,7 @@ namespace RepositoryLayer.Implentation
         {
             var result = from product in _context.Products
                          where product.Name.Contains(searchValue)
+                         orderby product.Name
                          select product;
             return result.Include(c=>c.Category).Skip((page - 1) * pageSize).Take(pageSize).ToList();
             /*var data = _context.Products.Include(c=>c.Category).Where((c) => c.Name.Contains(searchValue)).ToList();
